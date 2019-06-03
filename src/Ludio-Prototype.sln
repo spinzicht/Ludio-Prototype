@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludio.Services.Content.Api", "Ludio.Services.Content.Api\Ludio.Services.Content.Api.csproj", "{110409F0-B558-44E6-8C81-9F2C021CE572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Services.Content", "Ludio.Services.Content\Ludio.Services.Content.csproj", "{576951DC-4F1D-493A-A1A0-2716B2EC8A9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{110409F0-B558-44E6-8C81-9F2C021CE572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110409F0-B558-44E6-8C81-9F2C021CE572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110409F0-B558-44E6-8C81-9F2C021CE572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110409F0-B558-44E6-8C81-9F2C021CE572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576951DC-4F1D-493A-A1A0-2716B2EC8A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576951DC-4F1D-493A-A1A0-2716B2EC8A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576951DC-4F1D-493A-A1A0-2716B2EC8A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576951DC-4F1D-493A-A1A0-2716B2EC8A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9281A872-8939-4123-BC7C-2D5F922163E2}
+	EndGlobalSection
+EndGlobal
