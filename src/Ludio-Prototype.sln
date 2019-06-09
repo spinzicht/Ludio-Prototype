@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludio.Services.Content", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Client", "Ludio.Client\Ludio.Client.csproj", "{43150036-5EB9-4577-A058-5C2E5FBDE7B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Gateway", "Ludio.Gateway\Ludio.Gateway.csproj", "{DF633272-1BB5-41F3-88F4-51B626DB8EB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludio.Services.Gateway", "Ludio.Services.Gateway\Ludio.Services.Gateway.csproj", "{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{43150036-5EB9-4577-A058-5C2E5FBDE7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43150036-5EB9-4577-A058-5C2E5FBDE7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43150036-5EB9-4577-A058-5C2E5FBDE7B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF633272-1BB5-41F3-88F4-51B626DB8EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF633272-1BB5-41F3-88F4-51B626DB8EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF633272-1BB5-41F3-88F4-51B626DB8EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF633272-1BB5-41F3-88F4-51B626DB8EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

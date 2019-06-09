@@ -1,0 +1,43 @@
+{
+  "ReRoutes": [
+    //{
+    //  "DownstreamPathTemplate": "/api/Ping",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5010
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/Content/Ping"
+    //  //"UpstreamHttpMethod": [ "Put", "Delete" ]
+    //},
+    {
+      "DownstreamPathTemplate": "/api/tutorials/getTutorialSummaries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/tutorials/GetTutorialSummaries"
+      //"UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/tutorials/test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/tutorials/test"
+      //"UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
