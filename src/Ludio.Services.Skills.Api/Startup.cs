@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Ludio.Services.Content.Api
+namespace Ludio.Services.Skills.Api
 {
     public class Startup
     {
@@ -37,6 +37,7 @@ namespace Ludio.Services.Content.Api
             }
             else
             {
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
             }
 

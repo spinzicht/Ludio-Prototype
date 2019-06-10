@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ludio.Services.Content\Ludio.Services.Content.csproj" />
+    <ProjectReference Include="..\Ludio.Services.Skills\Ludio.Services.Skills.csproj" />
   </ItemGroup>
 
 </Project>

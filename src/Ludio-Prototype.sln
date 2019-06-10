@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Client", "Ludio.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludio.Services.Gateway", "Ludio.Services.Gateway\Ludio.Services.Gateway.csproj", "{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Services.Skills", "Ludio.Services.Skills\Ludio.Services.Skills.csproj", "{FBB8B844-13E2-4F9B-806F-EE72088FD616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludio.Services.Skills.Api", "Ludio.Services.Skills.Api\Ludio.Services.Skills.Api.csproj", "{6951E821-756D-4EFB-969D-A95E54C6DD50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5DB966F-10BF-4DE1-AEC0-4CEE0D94AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBB8B844-13E2-4F9B-806F-EE72088FD616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBB8B844-13E2-4F9B-806F-EE72088FD616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBB8B844-13E2-4F9B-806F-EE72088FD616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBB8B844-13E2-4F9B-806F-EE72088FD616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6951E821-756D-4EFB-969D-A95E54C6DD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6951E821-756D-4EFB-969D-A95E54C6DD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6951E821-756D-4EFB-969D-A95E54C6DD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6951E821-756D-4EFB-969D-A95E54C6DD50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
