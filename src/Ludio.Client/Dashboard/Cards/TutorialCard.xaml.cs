@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ludio
+namespace Ludio.Dashboard.Cards
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for TutorialCard.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TutorialCard : UserControl
     {
-        public MainWindow()
+        public TutorialCard()
         {
             InitializeComponent();
         }
