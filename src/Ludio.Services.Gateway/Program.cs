@@ -1,6 +1,8 @@
 ﻿using System.IO;
+using Ludio.Services.Gateway.Aggregators;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
@@ -24,8 +26,12 @@ namespace Ludio.Services.Gateway
                         .AddJsonFile("ocelot.json")
                         .AddEnvironmentVariables();
                 })
-                .ConfigureServices(s => {
-                    s.AddOcelot();
+                .ConfigureServices(services =>
+                {
+                    services.AddTransient<TutorialSummarySkillsAggregator>();
+
+                    services.AddOcelot()
+                        .AddTransientDefinedAggregator<TutorialSummarySkillsAggregator>();
                 })
                 .ConfigureLogging((hostingContext, logging) =>
                 {

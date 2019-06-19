@@ -11,20 +11,14 @@ namespace Ludio.Services.Content.Api.Controllers
     [ApiController]
     public class TutorialSummariesController : ControllerBase
     {
+        // TODO: inject
+        readonly TutorialSummaryService _tutorialSummaryService = new TutorialSummaryService();
+        
         // GET api/TutorialSummaries
         [HttpGet]
         public ActionResult<IEnumerable<TutorialSummary>> Get()
         {
-            var tutorialSummary = new TutorialSummary()
-            {
-                Name = "Test tutorial",
-                Thumbnail = "smiley.png",
-                Author = "Harry",
-                Program = "Scratch",
-                SkillIds = new[] { 1, 2 }
-            };
-            
-            return new List<TutorialSummary> { tutorialSummary };
+            return _tutorialSummaryService.GetTutorialSummaries().ToList();
         }
     }
 }

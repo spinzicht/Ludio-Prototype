@@ -1,6 +1,6 @@
 {
   "ReRoutes": [
-    
+
     {
       "DownstreamPathTemplate": "/api/tutorialSummaries",
       "DownstreamScheme": "http",
@@ -10,7 +10,21 @@
           "Port": 5010
         }
       ],
-      "UpstreamPathTemplate": "/tutorialSummaries"
+      "UpstreamPathTemplate": "/tutorialSummaries",
+      "Key": "tutorial-summaries"
+      //"UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/skills",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "UpstreamPathTemplate": "/skills",
+      "Key": "skills"
       //"UpstreamHttpMethod": [ "Get" ]
     },
     {
@@ -28,5 +42,15 @@
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5000"
-  }
+  },
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "tutorial-summaries",
+        "skills"
+      ],
+      "UpstreamPathTemplate": "/tutorialSummaries2",
+      "Aggregator": "TutorialSummarySkillsAggregator"
+    }
+  ]
 }
