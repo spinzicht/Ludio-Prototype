@@ -15,7 +15,7 @@ namespace Ludio.Services.Gateway
         {
             new WebHostBuilder()
                 .UseKestrel()
-                //.UseUrls("http://localhost:12345")
+                // .UseUrls("http://localhost:5000")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
@@ -38,8 +38,7 @@ namespace Ludio.Services.Gateway
                     //add your logging
                     logging.AddConsole();
                 })
-                // Use as pure Web Server?
-                //.UseIISIntegration()
+                .UseIISIntegration()
                 //.UseIIS()
                 .Configure(app =>
                 {

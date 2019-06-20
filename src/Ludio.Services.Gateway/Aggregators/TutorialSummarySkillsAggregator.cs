@@ -14,43 +14,24 @@ namespace Ludio.Services.Gateway.Aggregators
 {
     public class TutorialSummarySkillsAggregator : IDefinedAggregator
     {
-        //public async Task<DownstreamResponse> Aggregate(List<DownstreamResponse> responses)
-        //{
-
-            //one = await responses[0].Content.ReadAsStringAsync();
-            //dynamic two = await responses[1].Content.ReadAsStringAsync();
-
-            //one.Skills = "";
-
-            //var merge = $"{one}, {two}";
-            //merge = merge.Replace("Hello", "Bye").Replace("{", "").Replace("}", "");
-            
-            //var headers = responses.SelectMany(x => x.Headers).ToList();
-            //return new DownstreamResponse(new StringContent(merge), HttpStatusCode.OK, headers, "");
-        //}
-
         public async Task<DownstreamResponse> Aggregate(List<DownstreamContext> responses)
         {
+            // TODO: this is ugly af but good enough right now, will move to a composite service some day soon(TM)
+            
             string one = await responses[0].DownstreamResponse.Content.ReadAsStringAsync();
             string two = await responses[1].DownstreamResponse.Content.ReadAsStringAsync();
 
             dynamic tutorialSummaries = JsonConvert.DeserializeObject(one);
-
-           
-
             dynamic skills = JsonConvert.DeserializeObject(two);
-
-            
-            List<dynamic> applicableSkills = new List<dynamic>();
             
             foreach (dynamic ts in tutorialSummaries)
-            { 
+            {
+                List<dynamic> applicableSkills = new List<dynamic>();
+
                 foreach (int id in ts.skillIds)
                 {
                     foreach (dynamic s in skills)
                     {
-                        
-
                         if (s.id == id)
                         {
                             applicableSkills.Add(s);
@@ -61,8 +42,10 @@ namespace Ludio.Services.Gateway.Aggregators
                 ts.skills = JArray.FromObject(applicableSkills);
             }
 
-            return JsonConvert.SerializeObject(tutorialSummaries);
-        }
+            var result = JsonConvert.SerializeObject(tutorialSummaries);
 
+            var headers = responses.SelectMany(x => x.DownstreamResponse.Headers).ToList();
+            return new DownstreamResponse(new StringContent(result), HttpStatusCode.OK, headers, "");
+        }
     }
 }

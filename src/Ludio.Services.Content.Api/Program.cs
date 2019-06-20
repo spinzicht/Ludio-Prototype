@@ -19,6 +19,8 @@ namespace Ludio.Services.Content.Api
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel()
+                .UseUrls("http://localhost:5010")
                 .UseStartup<Startup>();
     }
 }
